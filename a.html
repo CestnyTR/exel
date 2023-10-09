@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL Veri Çekme Uygulaması</title>
+</head>
+<body>
+  <h1>URL Veri Çekme Uygulaması</h1>
+  <label for="urlInput">URL:</label>
+  <input type="text" id="urlInput">
+  <button onclick="fetchData()">Veri Çek</button>
+
+  <h2>Sonuçlar:</h2>
+  <pre id="results"></pre>
+
+  <script>
+    async function fetchData() {
+      const url = document.getElementById("urlInput").value;
+      try {
+        const response = await fetch(url);
+        const data = await response.text();
+        document.getElementById("results").textContent = data;
+      } catch (error) {
+        document.getElementById("results").textContent = "Veri çekme sırasında bir hata oluştu: " + error.message;
+      }
+    }
+  </script>
+</body>
+</html>

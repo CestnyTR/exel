@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+
+  <body>
+    <form id="İmport">
+      <label for="link">link</label>
+      <input type="text" id="link" name="link" />
+      <input type="button"  value="Gönder" onclick="ImportData()" />
+    </form>
+
+    <form id="export">
+      <table>
+        <tr>
+          <td>satır/Başlıklar</td>
+          <td><label for="head">Başlık</label></td>
+          <td><label for="price">Fiyat</label></td>
+          <td><label for="description">Açıklama</label></td>
+          <td><label for="image">Resimler</label></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>A</td>
+          <td>B</td>
+          <td>C</td>
+          <td>D</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><input type="text" name="head" id="head" /></td>
+          <td><input type="text" name="price" id="price" /></td>
+          <td><input type="text" name="description" id="description" /></td>
+          <td><input type="text" name="image" id="image" /></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><input type="text" name="head" id="head" /></td>
+          <td><input type="text" name="price" id="price" /></td>
+          <td><input type="text" name="description" id="description" /></td>
+          <td><input type="text" name="image" id="image" /></td>
+        </tr>
+        <tr>
+          <td><input type="submit" value="Kaydet" onclick="exportExel()" /></td>
+          <td><input type="reset" value="Sıfırla" /></td>
+        </tr>
+      </table>
+    </form>
+
+    <script src="backend2.js"></script>
+  </body>
+</html>
